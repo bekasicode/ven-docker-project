@@ -1,3 +1,7 @@
-/apache/ssl/*
+/apache/ssl/*.crt
+/apache/ssl/*.key
+/apache/ssl/*.csr
+/apache/ssl/*.ca-bundle
+/apache/ssl/*.
 /venus/*
 /dbdata/*
