@@ -1,0 +1,41 @@
+version: "3.2"
+services:
+ web:
+  container_name: webserver
+  image: romiafrizal/ven-p:1.0
+  
+  ports: 
+   - "80:80"
+   - "443:443"
+   - "9000:9000"
+  volumes:
+   - type: bind
+     source: ./venus
+     target: /var/www/venus
+
+   - type: bind
+     source: ./apache/ssl
+     target: /opt/docker/etc/httpd/ssl
+
+  environment:
+   - PHP_MEMORY_LIMIT=-1
+   - WEB_DOCUMENT_ROOT=/var/www/venus/web
+   - WEB_ALIAS_DOMAIN=local.bobobobo.com
+
+
+
+ #db:
+  #image: mysql:5.5
+  #environment:
+  # - MYSQL_ROOT_PASSWORD: "root"
+  # - MYSQL_DATABASE: "bo4_docker"
+   #- MYSQL_USER: "bobobobo"
+  # - MYSQL_PASSWORD: "bobobobo"
+  #volumes:
+  # - dbdata: "./dbdata:/var/lib/mysql"
+  #ports: 
+  # - 3306:3306 
+volumes: 
+ venus:
+ ssl:
+ #dbdata: 
