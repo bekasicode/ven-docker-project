@@ -3,4 +3,4 @@
 /apache/ssl/*.csr
 /apache/ssl/*.ca-bundle
 /venus/*
-mysql/dbdata/*
+/mysql/dbdata/*
