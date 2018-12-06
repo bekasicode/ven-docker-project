@@ -25,18 +25,17 @@ services:
 
 
  database:
+  container_name: database
   image: mysql:5.5
   environment:
-   - MYSQL_ROOT_PASSWORD: "mypass"
-   - MYSQL_DATABASE: "bo4_docker"
-   - MYSQL_USER: "myuser"
-   - MYSQL_PASSWORD: "mypass"
+   MYSQL_ROOT_PASSWORD: mypass
+   MYSQL_DATABASE: bo4_docker
+   MYSQL_USER: myuser
+   MYSQL_PASSWORD: mypass
   volumes:
    - type: bind
-     source: ./dbdata
-     target: /dbdata:/var/lib/mysql
-   
-   
+     source: ./mysql/dbdata
+     target: /var/lib/mysql   
   ports: 
    - 8306:3306 
 
