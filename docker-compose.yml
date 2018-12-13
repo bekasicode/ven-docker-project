@@ -2,7 +2,7 @@ version: "3.2"
 services:
  web:
   container_name: webserver
-  image: romiafrizal/ven-p:1.2
+  image: romiafrizal/ven-p:1.3
   
   ports: 
    - "80:80"
