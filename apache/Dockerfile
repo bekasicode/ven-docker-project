@@ -15,7 +15,7 @@ RUN a2enmod mpm_prefork
 
 RUN service apache2 restart
 
-RUN apt-get install libssh2-1-dev libssh2-phpc
+RUN apt-get install libssh2-1-dev libssh2-php
 
 EXPOSE 80
 EXPOSE 443
