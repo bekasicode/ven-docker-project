@@ -4,6 +4,10 @@ VOLUME /opt/docker/etc/httpd/ssl
 VOLUME /var/www/venus
 WORKDIR /var/www/venus
 
+RUN a2enmod rewriter
+
+RUN service apache2 restart
+
 EXPOSE 80
 EXPOSE 443
 EXPOSE 9000
