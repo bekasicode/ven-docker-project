@@ -11,7 +11,7 @@ RUN a2dismod mpm_worker
 
 RUN service apache2 restart
 
-RUN a2enmod mpm_pervork
+RUN a2enmod mpm_prefork
 
 RUN service apache2 restart
 
