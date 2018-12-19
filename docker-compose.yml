@@ -2,11 +2,11 @@ version: "3.2"
 services:
  web:
   container_name: webserver
-  image: romiafrizal/ven-p:1.4
+  image: romiafrizal/ven-p:1.5
   
   ports: 
-   - "80:80"
-   - "443:443"
+   - "8080:80"
+   - "8443:443"
    - "9000:9000"
   volumes:
    - type: bind
